@@ -1,4 +1,3 @@
-import { useState } from "react";
 import * as Icons from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
@@ -6,8 +5,8 @@ import { skills } from "../data/content";
 import { bgSolid } from "../data/colorMap";
 
 function SkillCard({ skill, index }) {
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const Icon = Icons[skill.icon] || Icons.Code2;
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
   function handleMove(e) {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -28,26 +27,12 @@ function SkillCard({ skill, index }) {
         animate={{ rotateX: tilt.x, rotateY: tilt.y }}
         transition={{ type: "spring", stiffness: 200, damping: 18 }}
         style={{ transformPerspective: 800 }}
-        className="bg-surface brut-border-thick rounded-2xl shadow-brut p-5 hover:shadow-brut-lg transition-shadow duration-300"
+        className="bg-surface brut-border-thick rounded-2xl shadow-brut p-5 flex flex-col items-center justify-center text-center gap-3 hover:shadow-brut-lg hover:-translate-y-1 transition-all duration-300"
       >
-        <div className="flex items-center gap-3 mb-3">
-          <span className={`w-10 h-10 rounded-xl ${bgSolid[skill.color]} brut-border flex items-center justify-center shrink-0`}>
-            <Icon size={18} strokeWidth={2.25} />
-          </span>
-          <span className="font-display font-bold text-sm md:text-base">{skill.name}</span>
-        </div>
-        <div className="h-3 rounded-full bg-cream brut-border overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className={`h-full ${bgSolid[skill.color]}`}
-          />
-        </div>
-        <div className="text-right mt-1 font-display font-semibold text-xs text-muted">
-          {skill.level}%
-        </div>
+        <span className={`w-12 h-12 rounded-xl ${bgSolid[skill.color]} brut-border flex items-center justify-center shrink-0`}>
+          <Icon size={22} strokeWidth={2.25} />
+        </span>
+        <span className="font-display font-bold text-sm md:text-base">{skill.name}</span>
       </motion.div>
     </Reveal>
   );
