@@ -24,6 +24,15 @@ import mpr3 from "../assets/projects/mpr/mpr3.jpeg";
 import mpr4 from "../assets/projects/mpr/mpr4.jpeg";
 import mpr5 from "../assets/projects/mpr/mpr5.jpeg";
 
+// Cerdas Cermat MPR 40 Button (Final)
+import mpr40_1 from "../assets/projects/mpr40/mpr40-1.jpeg";
+import mpr40_2 from "../assets/projects/mpr40/mpr40-2.jpeg";
+import mpr40_3 from "../assets/projects/mpr40/mpr40-3.jpeg";
+import mpr40_4 from "../assets/projects/mpr40/mpr40-4.jpeg";
+import mpr40_5 from "../assets/projects/mpr40/mpr40-5.jpeg";
+import mpr40_6 from "../assets/projects/mpr40/mpr40-6.jpeg";
+import mpr40_7 from "../assets/projects/mpr40/mpr40-7.jpeg";
+
 // Assetman JKM
 import jkm1 from "../assets/projects/jkm/jkm1.png";
 import jkm2 from "../assets/projects/jkm/jkm2.png";
@@ -87,24 +96,32 @@ export const infoCards = [
 ];
  
 export const skills = [
-  { name: "C++", level: 90, icon: "Terminal", color: "yellow" },
-  { name: "Arduino", level: 92, icon: "CircuitBoard", color: "blue" },
-  { name: "ESP32", level: 90, icon: "Cpu", color: "green" },
-  { name: "IoT", level: 88, icon: "Wifi", color: "orange" },
-  { name: "React", level: 85, icon: "Atom", color: "pink" },
-  { name: "JavaScript", level: 85, icon: "Braces", color: "purple" },
-  { name: "HTML", level: 95, icon: "Code2", color: "yellow" },
-  { name: "CSS", level: 90, icon: "Palette", color: "blue" },
-  { name: "Firebase", level: 82, icon: "Flame", color: "green" },
-  { name: "PLC", level: 75, icon: "Zap", color: "orange" },
-  { name: "Proteus", level: 78, icon: "CircuitBoard", color: "pink" },
-  { name: "MATLAB", level: 74, icon: "SquareFunction", color: "purple" },
-  { name: "Git", level: 88, icon: "GitBranch", color: "yellow" },
-  { name: "Python", level: 80, icon: "Terminal", color: "blue" },
-  { name: "UI/UX Design", level: 76, icon: "PenTool", color: "green" },
+  { name: "C++", icon: "Terminal", color: "yellow" },
+  { name: "Arduino", icon: "CircuitBoard", color: "blue" },
+  { name: "ESP32", icon: "Cpu", color: "green" },
+  { name: "IoT", icon: "Wifi", color: "orange" },
+  { name: "React", icon: "Atom", color: "pink" },
+  { name: "JavaScript", icon: "Braces", color: "purple" },
+  { name: "HTML", icon: "Code2", color: "yellow" },
+  { name: "CSS", icon: "Palette", color: "blue" },
+  { name: "Firebase", icon: "Flame", color: "green" },
+  { name: "PLC", icon: "Zap", color: "orange" },
+  { name: "Proteus", icon: "CircuitBoard", color: "pink" },
+  { name: "MATLAB", icon: "SquareFunction", color: "purple" },
+  { name: "Git", icon: "GitBranch", color: "yellow" },
+  { name: "Python", icon: "Terminal", color: "blue" },
+  { name: "UI/UX Design", icon: "PenTool", color: "green" },
 ];
  
 export const timeline = [
+  {
+    year: "Agustus 2026",
+    title: "Sistem Lomba Cerdas Cermat 40 Button — Final Lomba MPR RI",
+    description:
+      "Merancang dan membangun sistem cerdas cermat 40 tombol untuk babak Final Lomba MPR RI, lengkap dengan panel kontrol juri dan PCB rakitan sendiri.",
+    icon: "Trophy",
+    color: "pink",
+  },
   {
     year: "Juli 2026",
     title: "Project Assetman — Jagakarya Mandiri",
@@ -169,6 +186,16 @@ export const projects = [
     githubLink: null,
   },
   {
+    title: "Sistem Lomba Cerdas Cermat 40 Button (Final Lomba MPR RI)",
+    description:
+      "Sistem cerdas cermat 40 tombol peserta untuk babak Final Lomba MPR RI. Terdiri dari unit tombol peserta, splitter, dan panel kontrol juri (Benar, Salah, Eliminasi, Reset, Mode, Aux) dengan komunikasi RS485. PCB dirancang dan dicetak sendiri.",
+    tags: ["Embedded", "C++", "Custom PCB", "RS485"],
+    color: "pink",
+    images: [mpr40_1, mpr40_2, mpr40_3, mpr40_4, mpr40_5, mpr40_6, mpr40_7],
+    demoLink: null,
+    githubLink: null,
+  },
+  {
     title: "Sistem Lomba Cerdas Cermat 30 Button (MPR RI)",
     description:
       "Sistem buzzer digital untuk lomba cerdas cermat dengan 30 tombol peserta, dikembangkan untuk acara resmi MPR RI dengan deteksi tombol tercepat secara akurat.",
@@ -196,7 +223,7 @@ export const labGallery = {
   images: [lab1, lab2, lab3, lab4, lab5, lab6, lab7],
 };
 export const stats = [
-  { value: 4, suffix: "", label: "Projects", icon: "FolderKanban", color: "yellow" },
+  { value: 5, suffix: "", label: "Projects", icon: "FolderKanban", color: "yellow" },
   { value: 10, suffix: "+", label: "Technologies", icon: "Layers", color: "blue" },
   { value: 1000, suffix: "+", label: "Hours of Learning", icon: "Clock", color: "green" },
   { value: 100, suffix: "%", label: "Passion for Innovation", icon: "Flame", color: "orange" },
